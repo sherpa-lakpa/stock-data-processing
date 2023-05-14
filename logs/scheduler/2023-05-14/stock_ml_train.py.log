@@ -166,3 +166,66 @@
 [2023-05-14 00:22:51,247] {logging_mixin.py:115} INFO - [2023-05-14 00:22:51,247] {dag.py:2371} INFO - Sync 1 DAGs
 [2023-05-14 00:22:51,257] {logging_mixin.py:115} INFO - [2023-05-14 00:22:51,257] {dag.py:2919} INFO - Setting next_dagrun for stock_ml_train to None, run_after=None
 [2023-05-14 00:22:51,262] {processor.py:161} INFO - Processing /opt/airflow/dags/stock_ml_train.py took 0.434 seconds
+[2023-05-14 00:23:21,491] {processor.py:153} INFO - Started process (PID=15826) to work on /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:23:21,493] {processor.py:641} INFO - Processing file /opt/airflow/dags/stock_ml_train.py for tasks to queue
+[2023-05-14 00:23:21,494] {logging_mixin.py:115} INFO - [2023-05-14 00:23:21,494] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:23:21,919] {processor.py:651} INFO - DAG(s) dict_keys(['stock_ml_train']) retrieved from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:23:21,934] {logging_mixin.py:115} INFO - [2023-05-14 00:23:21,933] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-05-14 00:23:21,943] {logging_mixin.py:115} INFO - [2023-05-14 00:23:21,943] {dag.py:2919} INFO - Setting next_dagrun for stock_ml_train to None, run_after=None
+[2023-05-14 00:23:21,949] {processor.py:161} INFO - Processing /opt/airflow/dags/stock_ml_train.py took 0.465 seconds
+[2023-05-14 00:23:52,153] {processor.py:153} INFO - Started process (PID=15855) to work on /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:23:52,155] {processor.py:641} INFO - Processing file /opt/airflow/dags/stock_ml_train.py for tasks to queue
+[2023-05-14 00:23:52,157] {logging_mixin.py:115} INFO - [2023-05-14 00:23:52,156] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:23:52,526] {processor.py:651} INFO - DAG(s) dict_keys(['stock_ml_train']) retrieved from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:23:52,541] {logging_mixin.py:115} INFO - [2023-05-14 00:23:52,541] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-05-14 00:23:52,551] {logging_mixin.py:115} INFO - [2023-05-14 00:23:52,551] {dag.py:2919} INFO - Setting next_dagrun for stock_ml_train to None, run_after=None
+[2023-05-14 00:23:52,558] {processor.py:161} INFO - Processing /opt/airflow/dags/stock_ml_train.py took 0.410 seconds
+[2023-05-14 00:24:22,747] {processor.py:153} INFO - Started process (PID=15884) to work on /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:24:22,749] {processor.py:641} INFO - Processing file /opt/airflow/dags/stock_ml_train.py for tasks to queue
+[2023-05-14 00:24:22,750] {logging_mixin.py:115} INFO - [2023-05-14 00:24:22,750] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:24:23,122] {processor.py:651} INFO - DAG(s) dict_keys(['stock_ml_train']) retrieved from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:24:23,137] {logging_mixin.py:115} INFO - [2023-05-14 00:24:23,137] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-05-14 00:24:23,147] {logging_mixin.py:115} INFO - [2023-05-14 00:24:23,147] {dag.py:2919} INFO - Setting next_dagrun for stock_ml_train to None, run_after=None
+[2023-05-14 00:24:23,153] {processor.py:161} INFO - Processing /opt/airflow/dags/stock_ml_train.py took 0.410 seconds
+[2023-05-14 00:24:53,411] {processor.py:153} INFO - Started process (PID=15905) to work on /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:24:53,413] {processor.py:641} INFO - Processing file /opt/airflow/dags/stock_ml_train.py for tasks to queue
+[2023-05-14 00:24:53,415] {logging_mixin.py:115} INFO - [2023-05-14 00:24:53,415] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:24:53,870] {processor.py:651} INFO - DAG(s) dict_keys(['stock_ml_train']) retrieved from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:24:53,894] {logging_mixin.py:115} INFO - [2023-05-14 00:24:53,893] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-05-14 00:24:53,910] {logging_mixin.py:115} INFO - [2023-05-14 00:24:53,910] {dag.py:2919} INFO - Setting next_dagrun for stock_ml_train to None, run_after=None
+[2023-05-14 00:24:53,918] {processor.py:161} INFO - Processing /opt/airflow/dags/stock_ml_train.py took 0.513 seconds
+[2023-05-14 00:25:24,101] {processor.py:153} INFO - Started process (PID=15934) to work on /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:25:24,104] {processor.py:641} INFO - Processing file /opt/airflow/dags/stock_ml_train.py for tasks to queue
+[2023-05-14 00:25:24,105] {logging_mixin.py:115} INFO - [2023-05-14 00:25:24,105] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:25:24,486] {processor.py:651} INFO - DAG(s) dict_keys(['stock_ml_train']) retrieved from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:25:24,500] {logging_mixin.py:115} INFO - [2023-05-14 00:25:24,500] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-05-14 00:25:24,511] {logging_mixin.py:115} INFO - [2023-05-14 00:25:24,511] {dag.py:2919} INFO - Setting next_dagrun for stock_ml_train to None, run_after=None
+[2023-05-14 00:25:24,516] {processor.py:161} INFO - Processing /opt/airflow/dags/stock_ml_train.py took 0.422 seconds
+[2023-05-14 00:25:54,737] {processor.py:153} INFO - Started process (PID=15964) to work on /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:25:54,739] {processor.py:641} INFO - Processing file /opt/airflow/dags/stock_ml_train.py for tasks to queue
+[2023-05-14 00:25:54,740] {logging_mixin.py:115} INFO - [2023-05-14 00:25:54,740] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:25:55,129] {processor.py:651} INFO - DAG(s) dict_keys(['stock_ml_train']) retrieved from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:25:55,144] {logging_mixin.py:115} INFO - [2023-05-14 00:25:55,143] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-05-14 00:25:55,154] {logging_mixin.py:115} INFO - [2023-05-14 00:25:55,154] {dag.py:2919} INFO - Setting next_dagrun for stock_ml_train to None, run_after=None
+[2023-05-14 00:25:55,159] {processor.py:161} INFO - Processing /opt/airflow/dags/stock_ml_train.py took 0.427 seconds
+[2023-05-14 00:26:25,389] {processor.py:153} INFO - Started process (PID=15992) to work on /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:26:25,392] {processor.py:641} INFO - Processing file /opt/airflow/dags/stock_ml_train.py for tasks to queue
+[2023-05-14 00:26:25,394] {logging_mixin.py:115} INFO - [2023-05-14 00:26:25,393] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:26:25,843] {processor.py:651} INFO - DAG(s) dict_keys(['stock_ml_train']) retrieved from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:26:25,859] {logging_mixin.py:115} INFO - [2023-05-14 00:26:25,858] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-05-14 00:26:25,869] {logging_mixin.py:115} INFO - [2023-05-14 00:26:25,869] {dag.py:2919} INFO - Setting next_dagrun for stock_ml_train to None, run_after=None
+[2023-05-14 00:26:25,874] {processor.py:161} INFO - Processing /opt/airflow/dags/stock_ml_train.py took 0.496 seconds
+[2023-05-14 00:26:56,065] {processor.py:153} INFO - Started process (PID=16021) to work on /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:26:56,066] {processor.py:641} INFO - Processing file /opt/airflow/dags/stock_ml_train.py for tasks to queue
+[2023-05-14 00:26:56,067] {logging_mixin.py:115} INFO - [2023-05-14 00:26:56,067] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:26:56,462] {processor.py:651} INFO - DAG(s) dict_keys(['stock_ml_train']) retrieved from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:26:56,477] {logging_mixin.py:115} INFO - [2023-05-14 00:26:56,477] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-05-14 00:26:56,487] {logging_mixin.py:115} INFO - [2023-05-14 00:26:56,487] {dag.py:2919} INFO - Setting next_dagrun for stock_ml_train to None, run_after=None
+[2023-05-14 00:26:56,493] {processor.py:161} INFO - Processing /opt/airflow/dags/stock_ml_train.py took 0.431 seconds
+[2023-05-14 00:27:26,736] {processor.py:153} INFO - Started process (PID=16048) to work on /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:27:26,738] {processor.py:641} INFO - Processing file /opt/airflow/dags/stock_ml_train.py for tasks to queue
+[2023-05-14 00:27:26,739] {logging_mixin.py:115} INFO - [2023-05-14 00:27:26,739] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:27:27,140] {processor.py:651} INFO - DAG(s) dict_keys(['stock_ml_train']) retrieved from /opt/airflow/dags/stock_ml_train.py
+[2023-05-14 00:27:27,155] {logging_mixin.py:115} INFO - [2023-05-14 00:27:27,155] {dag.py:2371} INFO - Sync 1 DAGs
+[2023-05-14 00:27:27,166] {logging_mixin.py:115} INFO - [2023-05-14 00:27:27,166] {dag.py:2919} INFO - Setting next_dagrun for stock_ml_train to None, run_after=None
+[2023-05-14 00:27:27,172] {processor.py:161} INFO - Processing /opt/airflow/dags/stock_ml_train.py took 0.441 seconds
