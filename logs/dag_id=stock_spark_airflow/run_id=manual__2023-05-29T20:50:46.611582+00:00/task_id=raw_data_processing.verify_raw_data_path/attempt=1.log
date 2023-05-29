@@ -1,0 +1,24 @@
+[2023-05-29 20:50:48,458] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: stock_spark_airflow.raw_data_processing.verify_raw_data_path manual__2023-05-29T20:50:46.611582+00:00 [queued]>
+[2023-05-29 20:50:48,463] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: stock_spark_airflow.raw_data_processing.verify_raw_data_path manual__2023-05-29T20:50:46.611582+00:00 [queued]>
+[2023-05-29 20:50:48,463] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-29 20:50:48,464] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-05-29 20:50:48,464] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-29 20:50:48,472] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): raw_data_processing.verify_raw_data_path> on 2023-05-29 20:50:46.611582+00:00
+[2023-05-29 20:50:48,475] {standard_task_runner.py:52} INFO - Started process 72 to run task
+[2023-05-29 20:50:48,479] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'stock_spark_***', 'raw_data_processing.verify_raw_data_path', 'manual__2023-05-29T20:50:46.611582+00:00', '--job-id', '377', '--raw', '--subdir', 'DAGS_FOLDER/stock_spark_ml.py', '--cfg-path', '/tmp/tmpsf8lya6j', '--error-file', '/tmp/tmptgf_5cgp']
+[2023-05-29 20:50:48,480] {standard_task_runner.py:80} INFO - Job 377: Subtask raw_data_processing.verify_raw_data_path
+[2023-05-29 20:50:48,524] {task_command.py:369} INFO - Running <TaskInstance: stock_spark_airflow.raw_data_processing.verify_raw_data_path manual__2023-05-29T20:50:46.611582+00:00 [running]> on host 5b0f4fa1b7e1
+[2023-05-29 20:50:48,579] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=stock_spark_***
+AIRFLOW_CTX_TASK_ID=raw_data_processing.verify_raw_data_path
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-29T20:50:46.611582+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-29T20:50:46.611582+00:00
+[2023-05-29 20:50:48,585] {logging_mixin.py:115} INFO - The new directory is created:  /usr/local/spark/staging/20230529/raw_data_processing
+[2023-05-29 20:50:48,585] {python.py:173} INFO - Done. Returned value was: None
+[2023-05-29 20:50:48,596] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=stock_spark_***, task_id=raw_data_processing.verify_raw_data_path, execution_date=20230529T205046, start_date=20230529T205048, end_date=20230529T205048
+[2023-05-29 20:50:48,611] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-29 20:50:48,643] {local_task_job.py:273} INFO - 2 downstream tasks scheduled from follow-on schedule check

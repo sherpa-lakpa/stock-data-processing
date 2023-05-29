@@ -61,6 +61,9 @@ x-airflow-common:
     AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth'
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
   volumes:
+    - ./spark/app:/usr/local/spark/app
+    - ./data:/usr/local/spark/data
+    - ./staging:/usr/local/spark/staging
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
@@ -75,6 +78,113 @@ x-airflow-common:
       condition: service_healthy
 
 services:
+  web:
+    image: flask-app:latest
+    expose:
+      - 8008
+    ports:
+      - '8008:5000'
+    environment:
+      - FLASK_APP=app
+      - SPARK_MASTER_URL=spark://spark:7077
+      - JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+    volumes:
+      - ./api:/app
+      - ./staging:/usr/local/spark/staging
+    
+  spark:
+    image: airflow-spark:latest
+    hostname: spark
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    volumes:
+      - ./spark/app:/usr/local/spark/app
+      - ./data:/usr/local/spark/data
+      - ./staging:/usr/local/spark/staging
+    ports:
+      - '8090:8080'
+      - '7077:7077'
+  spark-worker-1:
+    image: airflow-spark:latest
+    restart: on-failure
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    volumes:
+      - ./spark/app:/usr/local/spark/app
+      - ./data:/usr/local/spark/data
+      - ./staging:/usr/local/spark/staging
+  spark-worker-2:
+    image: airflow-spark:latest
+    restart: on-failure
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    volumes:
+      - ./spark/app:/usr/local/spark/app
+      - ./data:/usr/local/spark/data
+      - ./staging:/usr/local/spark/staging
+  spark-worker-3:
+    image: airflow-spark:latest
+    restart: on-failure
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    volumes:
+      - ./spark/app:/usr/local/spark/app
+      - ./data:/usr/local/spark/data
+      - ./staging:/usr/local/spark/staging
+  spark-worker-4:
+    image: airflow-spark:latest
+    restart: on-failure
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+    volumes:
+      - ./spark/app:/usr/local/spark/app
+      - ./data:/usr/local/spark/data
+      - ./staging:/usr/local/spark/staging
+  
+  #Jupyter notebook
+  # jupyter-spark:
+  #   image: jupyter/pyspark-notebook:spark-3.3.0
+  #   ports:
+  #     - "8888:8888"
+  #     - "4040-4080:4040-4080"
+  #   volumes:
+  #     - ./spark/app:/usr/local/spark/app
+  #     - ./data:/usr/local/spark/data
+  #     - ./staging:/usr/local/spark/staging
+  #     - ./notebooks:/home/jovyan/work/notebooks/
+
   postgres:
     image: postgres:13
     environment:

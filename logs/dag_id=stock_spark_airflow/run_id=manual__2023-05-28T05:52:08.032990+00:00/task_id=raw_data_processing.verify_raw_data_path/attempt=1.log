@@ -1,0 +1,23 @@
+[2023-05-28 05:52:08,753] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: stock_spark_airflow.raw_data_processing.verify_raw_data_path manual__2023-05-28T05:52:08.032990+00:00 [queued]>
+[2023-05-28 05:52:08,758] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: stock_spark_airflow.raw_data_processing.verify_raw_data_path manual__2023-05-28T05:52:08.032990+00:00 [queued]>
+[2023-05-28 05:52:08,758] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-28 05:52:08,759] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-05-28 05:52:08,760] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-05-28 05:52:08,767] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): raw_data_processing.verify_raw_data_path> on 2023-05-28 05:52:08.032990+00:00
+[2023-05-28 05:52:08,771] {standard_task_runner.py:52} INFO - Started process 88 to run task
+[2023-05-28 05:52:08,774] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'stock_spark_***', 'raw_data_processing.verify_raw_data_path', 'manual__2023-05-28T05:52:08.032990+00:00', '--job-id', '338', '--raw', '--subdir', 'DAGS_FOLDER/stock_spark_ml.py', '--cfg-path', '/tmp/tmp3_bplrdt', '--error-file', '/tmp/tmp84aucavo']
+[2023-05-28 05:52:08,775] {standard_task_runner.py:80} INFO - Job 338: Subtask raw_data_processing.verify_raw_data_path
+[2023-05-28 05:52:08,817] {task_command.py:369} INFO - Running <TaskInstance: stock_spark_airflow.raw_data_processing.verify_raw_data_path manual__2023-05-28T05:52:08.032990+00:00 [running]> on host 58e417c56c9d
+[2023-05-28 05:52:08,869] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=stock_spark_***
+AIRFLOW_CTX_TASK_ID=raw_data_processing.verify_raw_data_path
+AIRFLOW_CTX_EXECUTION_DATE=2023-05-28T05:52:08.032990+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-05-28T05:52:08.032990+00:00
+[2023-05-28 05:52:08,871] {python.py:173} INFO - Done. Returned value was: None
+[2023-05-28 05:52:08,881] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=stock_spark_***, task_id=raw_data_processing.verify_raw_data_path, execution_date=20230528T055208, start_date=20230528T055208, end_date=20230528T055208
+[2023-05-28 05:52:08,907] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-05-28 05:52:08,944] {local_task_job.py:273} INFO - 2 downstream tasks scheduled from follow-on schedule check

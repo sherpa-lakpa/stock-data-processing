@@ -1,0 +1,17 @@
+FROM python:3.8-alpine
+
+WORKDIR /app
+
+# Install app dependencies
+RUN apk add bash openjdk11 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+
+ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+
+RUN apk --no-cache add musl-dev linux-headers g++
+
+COPY api /app
+RUN pip install --upgrade pip
+RUN pip install -r /app/requirements.txt
+
+
+CMD ["python","/app/app.py"]

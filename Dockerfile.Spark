@@ -1,0 +1,8 @@
+FROM bitnami/spark:latest
+
+USER root
+# RUN curl https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-aws/3.3.1/hadoop-aws-3.3.1.jar --output /opt/bitnami/spark/jars/hadoop-aws-3.3.1.jar
+
+# COPY spark/app /usr/local/spark/app
+COPY requirements_spark.txt .
+RUN pip install -r requirements_spark.txt

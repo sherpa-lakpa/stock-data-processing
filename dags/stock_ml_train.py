@@ -2,6 +2,7 @@ from airflow.models import DAG
 from airflow.utils.task_group import TaskGroup
 from airflow.utils.dates import days_ago
 from airflow.operators.python_operator import PythonOperator
+from airflow.contrib.operators.spark_submit_operator import SparkSubmitOperator
 
 import os
 import pickle
@@ -18,6 +19,8 @@ args = {
     'owner': 'pipis',
     'start_date': days_ago(1)
 }
+
+spark_master = "spark://spark:7077"
 
 dag = DAG(dag_id = 'stock_ml_train', default_args=args, schedule_interval=None)
 
@@ -211,4 +214,16 @@ with dag:
         python_callable = train_model_func
     )
 
-    task_group_raw_data_processing >> task_group_feature_engineering >> train_model
+    spark_job = SparkSubmitOperator(
+        task_id="spark_job",
+        application="/usr/local/spark/app/hello-world.py", # Spark application path created in airflow and spark cluster
+        name="Spark Hello World",
+        conn_id="spark_default",
+        verbose=1,
+        conf={"spark.master": spark_master},
+        application_args=["/usr/local/spark/app/hello-world.py"],
+        dag=dag)
+
+
+    # task_group_raw_data_processing >> task_group_feature_engineering >> train_model
+    spark_job
